@@ -7,12 +7,12 @@ import {
   CardDescription
 } from '@/components/ui/card';
 
-export function RecentSales() {
+export function TeamMembers() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Recent Sales</CardTitle>
-        <CardDescription>You made 265 sales this month.</CardDescription>
+        <CardTitle>Team Memmbers</CardTitle>
+        <CardDescription>Cordinate your team</CardDescription>
       </CardHeader>
       <CardContent>
         <div className='space-y-8'>
@@ -30,7 +30,7 @@ export function RecentSales() {
                 olivia.martin@email.com
               </p>
             </div>
-            <div className='ml-auto font-medium'>+$1,999.00</div>
+            <div className='ml-auto font-medium'>Head Officer</div>
           </div>
           <div className='flex items-center'>
             <Avatar className='flex h-9 w-9 items-center justify-center space-y-0 border'>
@@ -46,7 +46,7 @@ export function RecentSales() {
                 jackson.lee@email.com
               </p>
             </div>
-            <div className='ml-auto font-medium'>+$39.00</div>
+            <div className='ml-auto font-medium'>Drone Pilot</div>
           </div>
           <div className='flex items-center'>
             <Avatar className='h-9 w-9'>
@@ -64,7 +64,7 @@ export function RecentSales() {
                 isabella.nguyen@email.com
               </p>
             </div>
-            <div className='ml-auto font-medium'>+$299.00</div>
+            <div className='ml-auto font-medium'>Site Inspector</div>
           </div>
           <div className='flex items-center'>
             <Avatar className='h-9 w-9'>
@@ -78,7 +78,7 @@ export function RecentSales() {
               <p className='text-sm font-medium leading-none'>William Kim</p>
               <p className='text-sm text-muted-foreground'>will@email.com</p>
             </div>
-            <div className='ml-auto font-medium'>+$99.00</div>
+            <div className='ml-auto font-medium'>Energy Incharge</div>
           </div>
           <div className='flex items-center'>
             <Avatar className='h-9 w-9'>
@@ -94,7 +94,7 @@ export function RecentSales() {
                 sofia.davis@email.com
               </p>
             </div>
-            <div className='ml-auto font-medium'>+$39.00</div>
+            <div className='ml-auto font-medium'>Maintainance Incharge</div>
           </div>
         </div>
       </CardContent>

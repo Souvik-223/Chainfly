@@ -33,14 +33,14 @@ export default async function Page(props: pageProps) {
       <div className='flex flex-1 flex-col space-y-4'>
         <div className='flex items-start justify-between'>
           <Heading
-            title='Products'
-            description='Manage products (Server side table functionalities.)'
+            title='Maintainance Data'
+            description='Manage Maintainance data over the panels'
           />
           <Link
             href='/dashboard/product/new'
             className={cn(buttonVariants(), 'text-xs md:text-sm')}
           >
-            <Plus className='mr-2 h-4 w-4' /> Add New
+            <Plus className='mr-2 h-4 w-4' /> Download Reports
           </Link>
         </div>
         <Separator />
