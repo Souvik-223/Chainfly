@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 
 export default function SignInViewPage() {
   return (
+    // logo 
     <div className='relative h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0'>
       <Link
         href='/examples/authentication'
@@ -27,18 +28,42 @@ export default function SignInViewPage() {
         <div className='relative z-20 flex items-center text-lg font-medium'>
           <Image
             src='/chainfly_logo.png'
-            className='pr-2 pl-2'
+            className='pl-2 pr-2'
             alt='Chainfly Logo'
             width={60}
             height={60}
           />
-          <span className='font-semibold font-serif text-2xl'>Chainfly</span>
+          <span className='font-serif text-2xl font-semibold'>Chainfly</span>
         </div>
+        <div className='relative z-20 flex items-center text-lg mt-24'>
+          <div className='text-lg'>
+            <span className='text-xl font-semibold'>
+              AI-Powered Image Analytics & GIS Mapping for Renewable Energy
+            </span>
+            <p className='italic text-md py-3'>
+            🚀Optimize Performance | Reduce Downtime | Maximize ROI Log in to
+            access advanced AI-driven insights for Solar Energy operations.
+            </p>
+
+            <ul typeof='disc' className='list-inside list-disc font-medium py-5'>
+              <li>
+                AI-Powered Defect Detection – Identify issues before failures
+                occur.{' '}
+              </li>
+              <li>
+                GIS Mapping & Site Optimization – Enhance efficiency with
+                precise data.{' '}
+              </li>
+              <li>
+                Predictive Maintenance & Smart Monitoring – Reduce costs and improve sustainability.{' '}
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* footer */}
         <div className='relative z-20 mt-auto'>
           <blockquote className='space-y-2'>
-            <p className='text-lg'>
-              
-            </p>
             <footer className='text-sm'>@Chainfly</footer>
           </blockquote>
         </div>

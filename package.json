@@ -101,5 +101,6 @@
   "overrides": {
     "@types/react": "19.0.1",
     "@types/react-dom": "19.0.2"
-  }
+  },
+  "packageManager": "pnpm@9.14.2+sha1.5202b50ab92394b3c922d2e293f196e2df6d441b"
 }

@@ -1,17 +1,20 @@
 import PageContainer from '@/components/layout/page-container';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Progress } from '@/components/ui/progress';
 import React from 'react';
 
 export default function OverViewLayout({
-  sales,
+  teams,
   pie_stats,
   bar_stats,
-  area_stats
+  area_stats,
+  defects
 }: {
-  sales: React.ReactNode;
+  teams: React.ReactNode;
   pie_stats: React.ReactNode;
   bar_stats: React.ReactNode;
   area_stats: React.ReactNode;
+  defects: React.ReactNode;
 }) {
   return (
     <PageContainer>
@@ -50,7 +53,7 @@ export default function OverViewLayout({
           <Card>
             <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
               <CardTitle className='text-sm font-medium'>
-                Subscriptions
+                Survey Schedule
               </CardTitle>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -68,15 +71,17 @@ export default function OverViewLayout({
               </svg>
             </CardHeader>
             <CardContent>
-              <div className='text-2xl font-bold'>+2350</div>
+            <div className='text-2xl font-bold'>Date: 12/12/2025</div>
               <p className='text-xs text-muted-foreground'>
-                +180.1% from last month
+              Time: 8:30am (IST)
               </p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
-              <CardTitle className='text-sm font-medium'>Sales</CardTitle>
+              <CardTitle className='text-sm font-medium'>
+                Total No. of Defects
+              </CardTitle>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
@@ -92,7 +97,7 @@ export default function OverViewLayout({
               </svg>
             </CardHeader>
             <CardContent>
-              <div className='text-2xl font-bold'>+12,234</div>
+              <div className='text-2xl font-bold'>200 this month</div>
               <p className='text-xs text-muted-foreground'>
                 +19% from last month
               </p>
@@ -100,7 +105,7 @@ export default function OverViewLayout({
           </Card>
           <Card>
             <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
-              <CardTitle className='text-sm font-medium'>Active Now</CardTitle>
+              <CardTitle className='text-sm font-medium'>Overall Health Score</CardTitle>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
@@ -115,21 +120,22 @@ export default function OverViewLayout({
               </svg>
             </CardHeader>
             <CardContent>
-              <div className='text-2xl font-bold'>+573</div>
-              <p className='text-xs text-muted-foreground'>
-                +201 since last hour
-              </p>
+              <div className='text-2xl font-bold'>92% <Progress value={92} /></div>
             </CardContent>
           </Card>
         </div>
         <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7'>
           <div className='col-span-4'>{bar_stats}</div>
           <div className='col-span-4 md:col-span-3'>
-            {/* sales arallel routes */}
-            {sales}
+            {/* sales parallel routes */}
+            {teams}
           </div>
           <div className='col-span-4'>{area_stats}</div>
-          <div className='col-span-4 md:col-span-3'>{pie_stats}</div>
+          <div className='col-span-4 md:col-span-3'>
+            {/* sales parallel routes */}
+            {defects}
+          </div>
+          {/* <div className='col-span-4 md:col-span-3'>{pie_stats}</div> */}
         </div>
       </div>
     </PageContainer>

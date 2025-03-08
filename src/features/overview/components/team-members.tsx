@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardHeader,
@@ -11,8 +12,15 @@ export function TeamMembers() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Team Memmbers</CardTitle>
-        <CardDescription>Cordinate your team</CardDescription>
+        <div className='flex justify-between'>
+          <div>
+            <CardTitle>Team Members</CardTitle>
+            <CardDescription>Cordinate your team</CardDescription>
+          </div>
+          <Button variant='default' className='max-w-fit'>
+            Add Member
+          </Button>
+        </div>
       </CardHeader>
       <CardContent>
         <div className='space-y-8'>

@@ -51,7 +51,15 @@ export const navItems: NavItem[] = [
     ]
   },
   {
-    title: 'Task Scheduler',
+    title: 'GIS Map',
+    url: '/dashboard/gismap',
+    icon: 'Map',
+    isActive: false,
+    shortcut: ['d', 'd'],
+    items: [] // Empty array as there are no child items for Dashboard
+  },
+  {
+    title: 'Maintainance Scheduler',
     url: '/dashboard/task',
     icon: 'kanban',
     shortcut: ['k', 'k'],

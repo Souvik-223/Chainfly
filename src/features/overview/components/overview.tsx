@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle
 } from '@/components/ui/card';
@@ -11,7 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AreaGraph } from './area-graph';
 import { BarGraph } from './bar-graph';
 import { PieGraph } from './pie-graph';
-import { RecentSales } from './defects-resolved';
+// import { DefectsResolved } from './defects-resolved';
 
 export default function OverViewPage() {
   return (
@@ -141,14 +140,8 @@ export default function OverViewPage() {
                 <BarGraph />
               </div>
               <Card className='col-span-4 md:col-span-3'>
-                <CardHeader>
-                  <CardTitle>Recent Sales</CardTitle>
-                  <CardDescription>
-                    You made 265 sales this month.
-                  </CardDescription>
-                </CardHeader>
                 <CardContent>
-                  <RecentSales />
+                  {/* <DefectsResolved /> */}
                 </CardContent>
               </Card>
               <div className='col-span-4'>
