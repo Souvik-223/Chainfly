@@ -23,32 +23,27 @@ export const navItems: NavItem[] = [
   },
   {
     title: 'Maintainance Reports',
-    url: '/dashboard/product',
+    url: '/dashboard/maintenance',
     icon: 'product',
     shortcut: ['p', 'p'],
     isActive: false,
     items: [] // No child items
   },
   {
-    title: 'System Info',
-    url: '#', // Placeholder as there is no direct link for the parent
+    title: 'Defects and Issues',
+    url: '/dashboard/defects',
+    icon: 'help',
+    shortcut: ['d', 'i'],
+    isActive: false,
+    items: [] // No child items
+  },
+  {
+    title: 'System Health Insight',
+    url: '/dashboard/systemhealth',
     icon: 'billing',
-    isActive: true,
-
-    items: [
-      {
-        title: 'System Health insights',
-        url: '/dashboard/profile',
-        icon: 'userPen',
-        shortcut: ['m', 'm']
-      },
-      {
-        title: 'Defects',
-        shortcut: ['l', 'l'],
-        url: '/',
-        icon: 'login'
-      }
-    ]
+    shortcut: ['s', 'i'],
+    isActive: false,
+    items: [] // No child items
   },
   {
     title: 'GIS Map',

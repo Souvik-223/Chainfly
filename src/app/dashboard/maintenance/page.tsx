@@ -11,9 +11,15 @@ import { SearchParams } from 'nuqs/server';
 import { Suspense } from 'react';
 import ProductListingPage from '@/features/products/components/product-listing';
 import ProductTableAction from '@/features/products/components/product-tables/product-table-action';
+import RoiRepairs from './_components/RoiRepairs';
+import EnergyLossEstimation from './_components/EnergyLossEsitimation';
+import SystemHealth from './_components/SystemHealth';
+import UvRadiationGraph from './_components/UVRadiationGraph';
+import Hotspots from './_components/Hotspots';
+import DefectAnalysis from './_components/DefectAnalysis';
 
 export const metadata = {
-  title: 'Dashboard: Products'
+  title: 'Dashboard: Maintainance'
 };
 
 type pageProps = {
@@ -34,23 +40,32 @@ export default async function Page(props: pageProps) {
         <div className='flex items-start justify-between'>
           <Heading
             title='Maintainance Data'
-            description='Manage Maintainance data over the panels'
+            description='View Maintainance data over the panels'
           />
           <Link
-            href='/dashboard/product/new'
+            href='/dashboard/maintainance/download'
             className={cn(buttonVariants(), 'text-xs md:text-sm')}
           >
             <Plus className='mr-2 h-4 w-4' /> Download Reports
           </Link>
         </div>
         <Separator />
-        <ProductTableAction />
+        <div className='grid grid-cols-2 lg:grid-cols-3 space-x-4 space-y-4 h-[75vh] overflow-auto m-4'>
+          <UvRadiationGraph/>
+          <EnergyLossEstimation />
+          <Hotspots />
+          <RoiRepairs />
+          <DefectAnalysis/>
+          <SystemHealth/>
+        </div>
+
+        {/* <ProductTableAction />
         <Suspense
           key={key}
           fallback={<DataTableSkeleton columnCount={5} rowCount={10} />}
         >
           <ProductListingPage />
-        </Suspense>
+        </Suspense> */}
       </div>
     </PageContainer>
   );
