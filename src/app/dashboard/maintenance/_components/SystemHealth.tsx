@@ -18,12 +18,12 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 const chartData = [
-  { month: "January", desktop: 186, mobile: 160 },
-  { month: "February", desktop: 185, mobile: 170 },
-  { month: "March", desktop: 207, mobile: 180 },
-  { month: "April", desktop: 173, mobile: 160 },
-  { month: "May", desktop: 160, mobile: 190 },
-  { month: "June", desktop: 174, mobile: 204 },
+  { month: "Panel Health", desktop: 186, mobile: 160 },
+  { month: "Wirings", desktop: 185, mobile: 170 },
+  { month: "Battery", desktop: 207, mobile: 180 },
+  { month: "Sunlight", desktop: 173, mobile: 160 },
+  { month: "Efficiency", desktop: 160, mobile: 190 },
+  { month: "Gust", desktop: 174, mobile: 204 },
 ]
 
 const chartConfig = {
@@ -41,7 +41,7 @@ export default function SystemHealth() {
   return (
     <Card>
       <CardHeader className="items-center pb-4">
-        <CardTitle>Radar Chart - Lines Only</CardTitle>
+        <CardTitle>System Health Insights</CardTitle>
         <CardDescription>
           Showing total visitors for the last 6 months
         </CardDescription>

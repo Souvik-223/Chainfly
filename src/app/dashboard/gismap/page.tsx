@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 export default function page() {
   return (
     <div className='container grid grid-cols-[80%_20%] gap-2'>
-      <div className='relative w-[70vw] h-[80vh] container border-2 rounded-xl border-green-700 overflow-hidden items-center justify-center  mx-auto'>
+      <div className='h-[80vh] container border-2 rounded-xl border-green-700 overflow-hidden items-center justify-center  mx-auto'>
         <Image
           className='object-contain h-full w-full'
           src='/gis-image.png'

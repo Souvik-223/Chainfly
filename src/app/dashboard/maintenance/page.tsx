@@ -2,15 +2,11 @@ import PageContainer from '@/components/layout/page-container';
 import { buttonVariants } from '@/components/ui/button';
 import { Heading } from '@/components/ui/heading';
 import { Separator } from '@/components/ui/separator';
-import { DataTableSkeleton } from '@/components/ui/table/data-table-skeleton';
 import { searchParamsCache, serialize } from '@/lib/searchparams';
 import { cn } from '@/lib/utils';
 import { Plus } from 'lucide-react';
 import Link from 'next/link';
 import { SearchParams } from 'nuqs/server';
-import { Suspense } from 'react';
-import ProductListingPage from '@/features/products/components/product-listing';
-import ProductTableAction from '@/features/products/components/product-tables/product-table-action';
 import RoiRepairs from './_components/RoiRepairs';
 import EnergyLossEstimation from './_components/EnergyLossEsitimation';
 import SystemHealth from './_components/SystemHealth';
@@ -50,7 +46,7 @@ export default async function Page(props: pageProps) {
           </Link>
         </div>
         <Separator />
-        <div className='grid grid-cols-2 lg:grid-cols-3 space-x-4 space-y-4 h-[75vh] overflow-auto m-4'>
+        <div className='grid grid-cols-2 lg:grid-cols-3 space-x-4 space-y-4 h-[75vh] overflow-y-scroll scrollbar-hide m-4'>
           <UvRadiationGraph/>
           <EnergyLossEstimation />
           <Hotspots />
