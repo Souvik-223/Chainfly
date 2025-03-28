@@ -8,8 +8,8 @@ import NextTopLoader from 'nextjs-toploader';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Next Shadcn',
-  description: 'Basic dashboard with Next.js and Shadcn'
+  title: 'ChainFly',
+  description: 'A Solar management company'
 };
 
 const lato = Lato({
@@ -26,6 +26,9 @@ export default async function RootLayout({
   const session = await auth();
   return (
     <html lang='en' className={`${lato.className}`} suppressHydrationWarning>
+      <head>
+        <title> Chainfly - A Solar management company </title>
+      </head>
       <body className={'overflow-hidden'}>
         <NextTopLoader showSpinner={false} />
         <NuqsAdapter>

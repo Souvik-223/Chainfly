@@ -28,7 +28,7 @@ export default async function Page(props: pageProps) {
   searchParamsCache.parse(searchParams);
 
   // This key is used for invoke suspense if any of the search params changed (used for filters).
-  const key = serialize({ ...searchParams });
+  // const key = serialize({ ...searchParams });
 
   return (
     <PageContainer scrollable={false}>
@@ -46,13 +46,13 @@ export default async function Page(props: pageProps) {
           </Link>
         </div>
         <Separator />
-        <div className='grid grid-cols-2 lg:grid-cols-3 space-x-4 space-y-4 h-[75vh] overflow-y-scroll scrollbar-hide m-4'>
-          <UvRadiationGraph/>
+        <div className='m-4 grid h-[75vh] grid-cols-2 space-x-4 space-y-4 overflow-y-scroll scrollbar-hide lg:grid-cols-3'>
+          <UvRadiationGraph />
           <EnergyLossEstimation />
           <Hotspots />
           <RoiRepairs />
-          <DefectAnalysis/>
-          <SystemHealth/>
+          <DefectAnalysis />
+          <SystemHealth />
         </div>
 
         {/* <ProductTableAction />
