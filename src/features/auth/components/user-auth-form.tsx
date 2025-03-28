@@ -30,7 +30,7 @@ export default function UserAuthForm() {
   const [loading, startTransition] = useTransition();
   const defaultValues = {
     // demo@gmail.com  use it for testing
-    email: ''
+    email: 'demo@gmail.com'
   };
   const form = useForm<UserFormValue>({
     resolver: zodResolver(formSchema),
