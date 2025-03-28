@@ -7,7 +7,7 @@ import authConfig from '@/lib/auth.config';
 
 const { auth } = NextAuth(authConfig);
 
-export default auth((req) => {
+export default auth((req: any) => {
   if (!req.auth) {
     const url = req.url.replace(req.nextUrl.pathname, '/');
     return Response.redirect(url);
