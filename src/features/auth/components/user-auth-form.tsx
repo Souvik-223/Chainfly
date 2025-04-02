@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { redirect, useSearchParams } from 'next/navigation';
+import { redirect } from 'next/navigation';
 import { useTransition } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
@@ -24,8 +24,6 @@ const formSchema = z.object({
 type UserFormValue = z.infer<typeof formSchema>;
 
 export default function UserAuthForm() {
-  const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get('callbackUrl');
   const [loading, startTransition] = useTransition();
   const defaultValues = {
     // demo@gmail.com  use it for testing
@@ -46,8 +44,10 @@ export default function UserAuthForm() {
     // });
 
     if (data.email == 'demo@gmail.com') {
-      toast.success('Signed In Successfully!');
-      redirect('/dashboard');
+      startTransition(() => {
+        toast.success('Signed In Successfully!');
+        redirect('/dashboard');
+      });
     } else {
       toast.error('Invalid email address');
     }
