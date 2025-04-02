@@ -42,9 +42,10 @@ import {
 } from 'lucide-react';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { redirect, usePathname } from 'next/navigation';
 import * as React from 'react';
 import { Icons } from '../icons';
+import { toast } from 'sonner';
 
 export const company = {
   name: 'Chinfly Inc',
@@ -205,7 +206,12 @@ export default function AppSidebar() {
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={() => signOut()}>
+                <DropdownMenuItem
+                  onClick={() => {
+                    toast.success('Signed out Successfully!');
+                    redirect('/');
+                  }}
+                >
                   <LogOut />
                   Log out
                 </DropdownMenuItem>
