@@ -1,3 +1,5 @@
+'use client';
+
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Metadata } from 'next';
@@ -12,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function SignInViewPage() {
   return (
-    // logo 
+    // logo
     <div className='relative h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0'>
       <Link
         href='/examples/authentication'
@@ -35,17 +37,20 @@ export default function SignInViewPage() {
           />
           <span className='font-serif text-2xl font-semibold'>Chainfly</span>
         </div>
-        <div className='relative z-20 flex items-center text-lg mt-24'>
+        <div className='relative z-20 mt-24 flex items-center text-lg'>
           <div className='text-lg'>
             <span className='text-xl font-semibold'>
               AI-Powered Image Analytics & GIS Mapping for Renewable Energy
             </span>
-            <p className='italic text-md py-3'>
-            🚀Optimize Performance | Reduce Downtime | Maximize ROI Log in to
-            access advanced AI-driven insights for Solar Energy operations.
+            <p className='text-md py-3 italic'>
+              🚀Optimize Performance | Reduce Downtime | Maximize ROI Log in to
+              access advanced AI-driven insights for Solar Energy operations.
             </p>
 
-            <ul typeof='disc' className='list-inside list-disc font-medium py-5'>
+            <ul
+              typeof='disc'
+              className='list-inside list-disc py-5 font-medium'
+            >
               <li>
                 AI-Powered Defect Detection – Identify issues before failures
                 occur.{' '}
@@ -55,7 +60,8 @@ export default function SignInViewPage() {
                 precise data.{' '}
               </li>
               <li>
-                Predictive Maintenance & Smart Monitoring – Reduce costs and improve sustainability.{' '}
+                Predictive Maintenance & Smart Monitoring – Reduce costs and
+                improve sustainability.{' '}
               </li>
             </ul>
           </div>
