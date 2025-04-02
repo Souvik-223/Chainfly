@@ -116,11 +116,11 @@ export const recentSalesData: SaleUser[] = [
 ];
 
 export interface PanelImage {
-  key: number,
-  src: string,
-  alt: string,
-  height: string,
-  width: string,
+  key: number;
+  src: string;
+  alt: string;
+  height: string;
+  width: string;
 }
 
 export const PanelImageData: PanelImage[] = [
@@ -129,74 +129,72 @@ export const PanelImageData: PanelImage[] = [
     src: '/Defects/frame1.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 2,
     src: '/Defects/frame2.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 3,
     src: '/Defects/frame3.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 4,
     src: '/Defects/frame4.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 5,
     src: '/Defects/frame5.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 6,
     src: '/Defects/frame6.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 7,
     src: '/Defects/frame7.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 8,
     src: '/Defects/frame8.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 9,
     src: '/Defects/frame9.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
-  },
+    width: '88px'
+  }
 ];
 
-
-
 export interface HotspotImage {
-  key: number,
-  src: string,
-  alt: string,
-  height: string,
-  width: string,
+  key: number;
+  src: string;
+  alt: string;
+  height: string;
+  width: string;
 }
 
 export const HotspotImageData: HotspotImage[] = [
@@ -205,62 +203,69 @@ export const HotspotImageData: HotspotImage[] = [
     src: '/Hotspots/hotspot1.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 2,
     src: '/Hotspots/hotspot2.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 3,
     src: '/Hotspots/hotspot3.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 4,
     src: '/Hotspots/hotspot4.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 5,
     src: '/Hotspots/hotspot5.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 6,
     src: '/Hotspots/hotspot6.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 7,
     src: '/Hotspots/hotspot7.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 8,
     src: '/Hotspots/hotspot8.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
+    width: '88px'
   },
   {
     key: 9,
     src: '/Hotspots/hotspot9.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
-    width:"88px" ,
-  },
+    width: '88px'
+  }
 ];
+
+export const user = {
+  id: '1',
+  name: 'John',
+  email: 'demo@gmail.com',
+  image: 'https://api.slingacademy.com/public/sample-users/1.png'
+};
