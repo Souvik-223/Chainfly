@@ -1,7 +1,7 @@
-"use client"
+'use client';
 
-import { TrendingUp } from "lucide-react"
-import { CartesianGrid, LabelList, Line, LineChart, XAxis } from "recharts"
+import { TrendingUp } from 'lucide-react';
+import { CartesianGrid, LabelList, Line, LineChart, XAxis } from 'recharts';
 
 import {
   Card,
@@ -9,33 +9,33 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+  CardTitle
+} from '@/components/ui/card';
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
-  ChartTooltipContent,
-} from "@/components/ui/chart"
+  ChartTooltipContent
+} from '@/components/ui/chart';
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-]
+  { month: 'January', radiationlevel: 186, mobile: 80 },
+  { month: 'February', radiationlevel: 305, mobile: 200 },
+  { month: 'March', radiationlevel: 237, mobile: 120 },
+  { month: 'April', radiationlevel: 73, mobile: 190 },
+  { month: 'May', radiationlevel: 209, mobile: 130 },
+  { month: 'June', radiationlevel: 214, mobile: 140 }
+];
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "hsl(var(--chart-1))",
+  radiationlevel: {
+    label: 'radiationlevel',
+    color: 'hsl(var(--chart-1))'
   },
   mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2))",
-  },
-} satisfies ChartConfig
+    label: 'Mobile',
+    color: 'hsl(var(--chart-2))'
+  }
+} satisfies ChartConfig;
 
 export default function UvRadiationGraph() {
   return (
@@ -52,12 +52,12 @@ export default function UvRadiationGraph() {
             margin={{
               top: 20,
               left: 12,
-              right: 12,
+              right: 12
             }}
           >
             <CartesianGrid vertical={false} />
             <XAxis
-              dataKey="month"
+              dataKey='month'
               tickLine={false}
               axisLine={false}
               tickMargin={8}
@@ -65,38 +65,39 @@ export default function UvRadiationGraph() {
             />
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent indicator="line" />}
+              content={<ChartTooltipContent indicator='line' />}
             />
             <Line
-              dataKey="desktop"
-              type="natural"
-              stroke="var(--color-desktop)"
+              dataKey='radiationlevel'
+              type='natural'
+              stroke='var(--color-radiationlevel)'
               strokeWidth={2}
               dot={{
-                fill: "var(--color-desktop)",
+                fill: 'var(--color-radiationlevel)'
               }}
               activeDot={{
-                r: 6,
+                r: 6
               }}
             >
               <LabelList
-                position="top"
+                position='top'
                 offset={12}
-                className="fill-foreground"
+                className='fill-foreground'
                 fontSize={12}
               />
             </Line>
           </LineChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
-          Up by 8.2% this month <TrendingUp className="h-4 w-4" />
+      <CardFooter className='flex-col items-start gap-2 text-sm'>
+        <div className='flex gap-2 font-medium leading-none'>
+          Up by 8.2% this month <TrendingUp className='h-4 w-4' />
         </div>
-        <div className="leading-none text-muted-foreground">
-          Showing Current UV radiation levels for the location for the last 6 months
+        <div className='leading-none text-muted-foreground'>
+          Showing Current UV radiationlevels for the location for the last 6
+          months
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

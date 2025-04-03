@@ -36,7 +36,7 @@ export function MicroCracks() {
   return (
     <Card className='flex flex-col'>
       <CardHeader className='items-center pb-0'>
-        <CardTitle>Microcraks</CardTitle>
+        <CardTitle>Solar Cell Faults</CardTitle>
         <CardDescription>1st January - 31st January 2025</CardDescription>
       </CardHeader>
       <CardContent className='flex flex-1 items-center pb-0'>

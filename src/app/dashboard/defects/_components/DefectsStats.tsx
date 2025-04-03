@@ -29,7 +29,9 @@ export default function DefectsStats() {
           </CardHeader>
           <CardContent>
             <div className='text-2xl font-bold'>180</div>
-            <p className='text-xs text-muted-foreground'>+12.1% from last month</p>
+            <p className='text-xs text-muted-foreground'>
+              +12.1% from last month
+            </p>
           </CardContent>
         </Card>
         <Card>
@@ -53,14 +55,14 @@ export default function DefectsStats() {
           </CardHeader>
           <CardContent>
             <div className='text-xl font-bold'>
-              82% of max capacity <Progress value={92} />
+              92% of max capacity <Progress value={92} />
             </div>
           </CardContent>
         </Card>
       </div>
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+      <div className='grid grid-cols-1 gap-4 lg:grid-cols-2'>
         <DustToPanel />
-        <MicroCracks/>
+        <MicroCracks />
       </div>
     </div>
   );

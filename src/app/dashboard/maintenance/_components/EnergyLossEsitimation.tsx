@@ -18,21 +18,21 @@ import {
   ChartTooltipContent
 } from '@/components/ui/chart';
 const chartData = [
-  { month: 'January', desktop: 186, mobile: 80 },
-  { month: 'February', desktop: 305, mobile: 200 },
-  { month: 'March', desktop: 237, mobile: 120 },
-  { month: 'April', desktop: 73, mobile: 190 },
-  { month: 'May', desktop: 209, mobile: 130 },
-  { month: 'June', desktop: 214, mobile: 140 }
+  { month: 'January', ideal: 186, actual: 80 },
+  { month: 'February', ideal: 305, actual: 200 },
+  { month: 'March', ideal: 237, actual: 120 },
+  { month: 'April', ideal: 73, actual: 190 },
+  { month: 'May', ideal: 209, actual: 130 },
+  { month: 'June', ideal: 214, actual: 140 }
 ];
 
 const chartConfig = {
-  desktop: {
-    label: 'Desktop',
+  ideal: {
+    label: 'ideal ',
     color: 'hsl(var(--chart-1))'
   },
-  mobile: {
-    label: 'Mobile',
+  actual: {
+    label: 'actual',
     color: 'hsl(var(--chart-2))'
   }
 } satisfies ChartConfig;
@@ -59,8 +59,8 @@ export default function EnergyLossEstimation() {
               cursor={false}
               content={<ChartTooltipContent indicator='dashed' />}
             />
-            <Bar dataKey='desktop' fill='var(--color-desktop)' radius={4} />
-            <Bar dataKey='mobile' fill='var(--color-mobile)' radius={4} />
+            <Bar dataKey='ideal' fill='var(--color-ideal )' radius={4} />
+            <Bar dataKey='actual' fill='var(--color-actual)' radius={4} />
           </BarChart>
         </ChartContainer>
       </CardContent>
