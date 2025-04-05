@@ -1,10 +1,9 @@
 import PageContainer from '@/components/layout/page-container';
-import { buttonVariants } from '@/components/ui/button';
+
 import { Heading } from '@/components/ui/heading';
 import { Separator } from '@/components/ui/separator';
 import { searchParamsCache, serialize } from '@/lib/searchparams';
-import { cn } from '@/lib/utils';
-import { Plus } from 'lucide-react';
+
 import Link from 'next/link';
 import { SearchParams } from 'nuqs/server';
 import RoiRepairs from './_components/RoiRepairs';
@@ -13,6 +12,8 @@ import SystemHealth from './_components/SystemHealth';
 import UvRadiationGraph from './_components/UVRadiationGraph';
 import Hotspots from './_components/Hotspots';
 import DefectAnalysis from './_components/DefectAnalysis';
+import { Download } from 'lucide-react';
+import Downloadbutton from './_components/Downloadbutton';
 
 export const metadata = {
   title: 'Dashboard: Maintainance'
@@ -38,12 +39,7 @@ export default async function Page(props: pageProps) {
             title='Maintainance Data'
             description='View Maintainance data over the panels'
           />
-          <Link
-            href='/dashboard/maintainance/download'
-            className={cn(buttonVariants(), 'text-xs md:text-sm')}
-          >
-            <Plus className='mr-2 h-4 w-4' /> Download Reports
-          </Link>
+          <Downloadbutton />
         </div>
         <Separator />
         <div className='m-4 grid h-[75vh] grid-cols-2 space-x-4 space-y-4 overflow-y-scroll scrollbar-hide lg:grid-cols-3'>
