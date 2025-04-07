@@ -118,6 +118,7 @@ export const recentSalesData: SaleUser[] = [
 export interface PanelImage {
   key: number;
   src: string;
+  url: string;
   alt: string;
   height: string;
   width: string;
@@ -126,66 +127,146 @@ export interface PanelImage {
 export const PanelImageData: PanelImage[] = [
   {
     key: 1,
-    src: '/Defects/frame1.jpg',
-    alt: 'olivia.martin@email.com',
+    src: '/DustDefects/frame1.jpg',
+    url: '/ElectricalDefects/frame1.jpg',
+    alt: 'frame1',
     height: '80px',
     width: '88px'
   },
   {
     key: 2,
-    src: '/Defects/frame2.jpg',
-    alt: 'olivia.martin@email.com',
+    src: '/DustDefects/frame2.jpg',
+    url: '/ElectricalDefects/frame2.jpg',
+    alt: 'frame2',
     height: '80px',
     width: '88px'
   },
   {
     key: 3,
-    src: '/Defects/frame3.jpg',
-    alt: 'olivia.martin@email.com',
+    src: '/DustDefects/frame3.jpg',
+    url: '/ElectricalDefects/frame3.jpg',
+    alt: 'frame3',
     height: '80px',
     width: '88px'
   },
   {
     key: 4,
-    src: '/Defects/frame4.jpg',
-    alt: 'olivia.martin@email.com',
+    src: '/DustDefects/frame4.jpg',
+    url: '/ElectricalDefects/frame4.jpg',
+    alt: 'frmae4',
     height: '80px',
     width: '88px'
   },
   {
     key: 5,
-    src: '/Defects/frame5.jpg',
-    alt: 'olivia.martin@email.com',
+    src: '/DustDefects/frame5.jpg',
+    url: '/ElectricalDefects/frame5.jpg',
+    alt: 'frame5',
     height: '80px',
     width: '88px'
+  }
+];
+
+export const panelDefectsData = [
+  {
+    id: 1,
+    DustDetection: {
+      DustParticles: 4,
+      BirdDroppings: 1,
+      DryLeaves: 2,
+      DryDebris: {
+        Leaves: 2,
+        SeedHusks: 3
+      }
+    },
+    electricalFaultDetection: {
+      Anomalies: 0,
+      CellComponents: 0,
+      Hotspots: {
+        SCHT1: 0,
+        SCHT2: 0
+      }
+    }
   },
   {
-    key: 6,
-    src: '/Defects/frame6.jpg',
-    alt: 'olivia.martin@email.com',
-    height: '80px',
-    width: '88px'
+    id: 2,
+    DustDetection: {
+      DustParticles: 7,
+      BirdDroppings: 0,
+      DryLeaves: 2,
+      DryDebris: {
+        Leaves: 2,
+        SeedHusks: 1
+      }
+    },
+    electricalFaultDetection: {
+      Anomalies: 0,
+      CellComponents: 1,
+      Hotspots: {
+        SCHT1: 0,
+        SCHT2: 0
+      }
+    }
   },
   {
-    key: 7,
-    src: '/Defects/frame7.jpg',
-    alt: 'olivia.martin@email.com',
-    height: '80px',
-    width: '88px'
+    id: 3,
+    DustDetection: {
+      DustParticles: 2,
+      BirdDroppings: 1,
+      DryLeaves: 3,
+      DryDebris: {
+        Leaves: 3,
+        SeedHusks: 2
+      }
+    },
+    electricalFaultDetection: {
+      Anomalies: 0,
+      CellComponents: 1,
+      Hotspots: {
+        SCHT1: 0,
+        SCHT2: 0
+      }
+    }
   },
   {
-    key: 8,
-    src: '/Defects/frame8.jpg',
-    alt: 'olivia.martin@email.com',
-    height: '80px',
-    width: '88px'
+    id: 4,
+    DustDetection: {
+      DustParticles: 4,
+      BirdDroppings: 0,
+      DryLeaves: 3,
+      DryDebris: {
+        Leaves: 3,
+        SeedHusks: 3
+      }
+    },
+    electricalFaultDetection: {
+      Anomalies: 0,
+      CellComponents: 3,
+      Hotspots: {
+        SCHT1: 0,
+        SCHT2: 0
+      }
+    }
   },
   {
-    key: 9,
-    src: '/Defects/frame9.jpg',
-    alt: 'olivia.martin@email.com',
-    height: '80px',
-    width: '88px'
+    id: 5,
+    DustDetection: {
+      DustParticles: 3,
+      BirdDroppings: 0,
+      DryLeaves: 3,
+      DryDebris: {
+        Leaves: 3,
+        SeedHusks: 2
+      }
+    },
+    electricalFaultDetection: {
+      Anomalies: 0,
+      CellComponents: 1,
+      Hotspots: {
+        SCHT1: 0,
+        SCHT2: 0
+      }
+    }
   }
 ];
 
@@ -200,66 +281,86 @@ export interface HotspotImage {
 export const HotspotImageData: HotspotImage[] = [
   {
     key: 1,
-    src: '/Hotspots/hotspot1.jpg',
+    src: '/Hotspot/hotspot1.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
     width: '88px'
   },
   {
     key: 2,
-    src: '/Hotspots/hotspot2.jpg',
+    src: '/Hotspot/hotspot2.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
     width: '88px'
   },
   {
     key: 3,
-    src: '/Hotspots/hotspot3.jpg',
+    src: '/Hotspot/hotspot3.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
     width: '88px'
   },
   {
     key: 4,
-    src: '/Hotspots/hotspot4.jpg',
+    src: '/Hotspot/hotspot4.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
     width: '88px'
   },
   {
     key: 5,
-    src: '/Hotspots/hotspot5.jpg',
+    src: '/Hotspot/hotspot5.jpg',
     alt: 'olivia.martin@email.com',
     height: '80px',
     width: '88px'
+  }
+];
+
+export const hotspotDefectsData = [
+  {
+    id: 1,
+    HotspotDetection: {
+      PID: 3,
+      PID2: 3,
+      PV: 2,
+      Hotspots: 1
+    }
   },
   {
-    key: 6,
-    src: '/Hotspots/hotspot6.jpg',
-    alt: 'olivia.martin@email.com',
-    height: '80px',
-    width: '88px'
+    id: 2,
+    HotspotDetection: {
+      PID: 10,
+      PID2: 0,
+      PV: 1,
+      Hotspots: 2
+    }
   },
   {
-    key: 7,
-    src: '/Hotspots/hotspot7.jpg',
-    alt: 'olivia.martin@email.com',
-    height: '80px',
-    width: '88px'
+    id: 3,
+    HotspotDetection: {
+      PID: 0,
+      PID2: 19,
+      PV: 3,
+      Hotspots: 3
+    }
   },
   {
-    key: 8,
-    src: '/Hotspots/hotspot8.jpg',
-    alt: 'olivia.martin@email.com',
-    height: '80px',
-    width: '88px'
+    id: 4,
+    HotspotDetection: {
+      PID: 0,
+      PID2: 3,
+      PV: 3,
+      Hotspots: 11
+    }
   },
   {
-    key: 9,
-    src: '/Hotspots/hotspot9.jpg',
-    alt: 'olivia.martin@email.com',
-    height: '80px',
-    width: '88px'
+    id: 5,
+    HotspotDetection: {
+      PID: 3,
+      PID2: 8,
+      PV: 3,
+      Hotspots: 13
+    }
   }
 ];
 

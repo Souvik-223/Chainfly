@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+.image-container img {
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center center; /* Ensure zooming happens from the center */
+}
+
+.zoomed img {
+  transform: scale(2); /* Adjust the zoom level as needed */
+  cursor: zoom-out;
+}
+
+.image-container {
+  cursor: zoom-in; /* Initial cursor */
+  overflow: auto; /* Allow scrolling when zoomed */
+}
+
 @layer base {
   :root {
     --background: 20 66% 99%;
